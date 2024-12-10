@@ -36,6 +36,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </tbody>
       </table>
       <button id="addRowBtn">+</button>
+      <button id="addRowBtn">-</button>
+      <hr>
+      <button id="addRowBtn">Save for later</button>
+      <button id="addRowBtn">Export Files</button>
+
     </div>
 `;
 
