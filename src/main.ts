@@ -3,8 +3,39 @@ import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile, toBlobURL } from '@ffmpeg/util';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-    <div id="drop-zone" style="width: 300px; height: 200px; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center;">
+    <h1>bookii manager</h1>
+    <div class="description">
+      <p>This small webapp is meant as helper for the bookii pens DIY recording feature.<br />
+        <ol>
+          <li>Record the audio on a device of your choice. </li>
+          <li>Load the seperate audio files in this web app. (the files are not uploaded and stay on your machine)</li>
+          <li>Add the Sticker number and optinally a name for your own organisation</li>
+          <li>Export the files to be saved in the DIYrecord folder of the bookii pen.</li>
+        </ol>
+      </p>
+    </div>
+    <hr>
+    <div id="drop-zone" style="width: 300px; height: 200px; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center;display: none; ">
         Drag and drop a media file here
+    </div>
+    <div>
+      <table id="dataTable">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Sticker Number</th>
+                  <th>Audio File</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="text" name="name"></td>
+                  <td><input type="number" name="number"></td>
+                  <td><input type="file" name="file"></td>
+              </tr>
+          </tbody>
+      </table>
+      <button id="addRowBtn">+</button>
     </div>
 `;
 
@@ -58,4 +89,20 @@ dropZone?.addEventListener('drop', async (event) => {
     a.href = href;
     document.body.appendChild(a);
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const addRowBtn = document.getElementById('addRowBtn') as HTMLButtonElement;
+  const dataTable = document.getElementById('dataTable') as HTMLTableElement;
+
+  addRowBtn.addEventListener('click', () => {
+      const newRow = dataTable.insertRow();
+      const nameCell = newRow.insertCell(0);
+      const numberCell = newRow.insertCell(1);
+      const fileCell = newRow.insertCell(2);
+
+      nameCell.innerHTML = '<input type="text" name="name">';
+      numberCell.innerHTML = '<input type="number" name="number">';
+      fileCell.innerHTML = '<input type="file" name="file">';
+  });
 });
