@@ -1,18 +1,3 @@
-## Vision / Wireframe
-
-### Title
-Short description how to use this tool, with easy to follow steps
-
-
-| Sticker Number| Name          |     Audio File  |   Preview   |  
-| -----------: | :------------  | :-------------- | :---------: |  
-| `1`          | `the animals`  |`Neue Aufnahme 65.m4a`  | ►    |
-|       `23`   | `the barn`     |`Recording_12-12-24.wav`| ►    |
-|              |                |                 |             |
-|              |                |   `+` `-`       |             |
-|              |                |                 |             |
-|              | **Export JSON**|**Convert Files**| **Play all**|
-
-
+BookiManager is a small webapp to help anyone convert audio files to **16kHz 16bit mono adpcm_ima_wav with all metadata stripped** to use with usb audio pens of a specific brand.
 
 
