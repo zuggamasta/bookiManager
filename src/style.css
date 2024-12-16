@@ -1,7 +1,7 @@
 :root {
-  color-scheme: light dark;
-  color: light-dark(var(--c-black),var(--c-white));
-  background-color: light-dark(var(--c-light),var(--c-dark));
+  color-scheme: light;
+  color: var(--c-black);
+  background-color: var(--c-light);
 
   --c-black: #000;
   --c-white: #ffffff;
@@ -11,19 +11,16 @@
   --c-warn-light: orangered;
   --c-warn-dark:  orange;
 
-  --c-dark-link: #0199B1;
-  --c-dark-link-hover: #0199B1;
-
   --c-green: #86BD42;
   --c-blue: #0199B1;
 }
 
-h1, h2, h3{
-  color: var(--c-blue);
+h1{
+  color: var(--c-green);
 }
 
 a {
-  color: var(--c-dark-link);
+  color: var(--c-blue);
   text-decoration: inherit;
 }
 a:hover {
@@ -33,7 +30,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -80,6 +76,19 @@ button a{
   color: white;
 }
 
+input {
+  border-radius: 4em;
+  border: 0px;
+  width: 2.2em;
+  height: 2.2em;
+  text-align: right;
+  font-size:1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  color: var(--c-light);
+  background-color: var(--c-green);
+}
+
 ol{
   text-align: left;
 }
@@ -92,7 +101,15 @@ hr{
 
 .warning {
   font-weight: 900;
-  color: light-dark(var(--c-warn-light),var(--c-warn-dark));
+  color: var(--c-warn-light);
+}
+
+.sticker-input{
+  background-color: #fff;
+  border-radius: 4em;
+  padding: 0.5em;
+  padding-left: 1em;
+  border: solid 1px #eee;
 }
 
 #ffmpeg-area{
@@ -111,5 +128,18 @@ hr{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--c-white);
 }
 
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  50% {
+    background-color: #FF4136;
+  }
+  100% {
+    background-color: #001F3F;
+  }
+}

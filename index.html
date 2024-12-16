@@ -11,34 +11,36 @@
   </head>
   <body>
     <div id="app">
-      <h1>Convert Audio for Bookii</h1>
+      <h1>Convert Audio for Bookii </h1>
+
+
       <div class="description">
         <h3>Convert any audio file to be played with bookii stickers.</h3>
           <p><span class="warning">This is a community project. Use it at your own risk!</span>
-            <h3> how to</h3>
           <ol>
             <li>Record the audio on a device of your choice. </li>
             <li>Drag and drop your audio file. (the files are <u>not</u> uploaded to the internet and stay on your computer)</li>
             <li>After the conversion is done, a button with link will enable you to download your file.</li>
             <li>Copy the files to to the booki pen via USB into the diyRecord folder.</li>
           </ol>
+
         </p>
       </div>
       <div id="ffmpeg-area">
         <div>
-          <p>
-            <label for="stickerInput">Enter the Number of the Sticker: </label>
-            <input type="number" id="stickerInput" min="0" max="300" value="1" style="font-size: large;">
+          <p class="sticker-input">
+            <label for="stickerInput">First enter sticker Number&nbsp;&nbsp;</label>
+            <input type="number" id="stickerInput" min="0" max="300" value="1">
           </p>
+
         </div>
         
         <div id="drop-zone" class="zone">
-            Drag and drop a media file here
+            Then drag and drop a media file here
         </div>
       </div>
-      <hr>
-      <a href="/">about</a>
       <img src="/booki.png" id="pen">
+
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
