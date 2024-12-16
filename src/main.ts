@@ -12,7 +12,6 @@ function updateStickerNumber() {
   stickerNumber = parseInt(input.value, 10);
 }
 
-
 dropZone?.addEventListener('dragover', (event) => {
   event.preventDefault();
   updateStickerNumber();
@@ -25,7 +24,7 @@ dropZone?.addEventListener('dragleave', () => {
 
 dropZone?.addEventListener('drop', async (event) => {
   event.preventDefault();
-  dropZone.style.borderColor = '#ccc'; //green
+  dropZone.style.borderColor = '#ccc'; // green
 
   const transcode = async (files: any) => {
     const ffmpeg = new FFmpeg();
@@ -69,7 +68,7 @@ dropZone?.addEventListener('drop', async (event) => {
 
     const href = await transcode(files);
     a.download =  'TestRec'+ String(stickerNumber+1) + '.wav';
-    a.textContent = 'Download converted file';
+    a.textContent = 'Download Sticker Number '+ String(stickerNumber);
     a.href = href;
     button.append(a)
     ffmegArea.appendChild(button);

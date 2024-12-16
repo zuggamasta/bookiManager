@@ -45,6 +45,14 @@ body {
   text-align: center;
 }
 
+#pen{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 5em;
+  z-index: -999;
+}
+
 .card {
   padding: 2em;
 }
