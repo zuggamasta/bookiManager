@@ -1,5 +1,5 @@
-import './style.css';
 import './typebase.css';
+import './style.css';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile, toBlobURL } from '@ffmpeg/util';
 
@@ -16,7 +16,6 @@ dropZone?.addEventListener('dragover', (event) => {
   event.preventDefault();
   updateStickerNumber();
   dropZone.style.borderColor = '#0199B1'; // blue
-  dropZone.style.animation = 'pulse 2s infinite;'
 });
 
 dropZone?.addEventListener('dragleave', () => {
