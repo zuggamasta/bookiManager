@@ -2,7 +2,7 @@
 /* Setup */
 html {
   /* Change default typefaces here */
-  font-family: monospace;
+  font-family: sans-serif;
   font-size: 137.5%;
   -webkit-font-smoothing: antialiased;
 }
