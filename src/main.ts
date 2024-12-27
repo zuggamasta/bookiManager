@@ -64,11 +64,12 @@ dropZone?.addEventListener('drop', async (event) => {
   const files = event.dataTransfer?.files;
   if (files && files.length > 0) {
     const button = document.createElement('button');
+    button.setAttribute("class","animate")
     const a = document.createElement('a');
 
     const href = await transcode(files);
     a.download =  'TestRec'+ String(stickerNumber+1) + '.wav';
-    a.textContent = 'Download Sticker Number '+ String(stickerNumber);
+    a.textContent = 'Sticker Nummer '+ String(stickerNumber) +' herunterladen';
     a.href = href;
     button.append(a)
     ffmegArea.appendChild(button);

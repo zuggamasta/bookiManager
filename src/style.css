@@ -107,7 +107,7 @@ hr{
 }
 
 details {
-  border-radius: 4px;
+  border-radius: 20px;
   text-align: left;
   border: 1px solid var(--c-gray);
   padding: 0.5em 0.5em 0;
@@ -127,7 +127,8 @@ summary:hover {
 }
 
 details[open] {
-  padding: 0.5em;
+  padding: 0.5em 0.5em 0.5em;
+
 }
 
 .warning {
@@ -197,4 +198,27 @@ details[open] {
   right: 0;
   max-width: 5em;
   z-index: -999;
+}
+
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+    transform:scaleY(0%);}
+  70% {
+    transform: scaleY(105%);  }
+  100% {
+    opacity: 1;
+    transform: scaleY(100%); }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .animate { animation: none !important; }
 }
