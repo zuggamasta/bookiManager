@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convert Audio for booki</title>
+    <title>Audio für Booki Sticker konvertieren</title>
     <script src="/ffmpeg/ffmpeg-core.js"></script>
     <script src="/ffmpeg/ffmpeg-core.wasm" type="application/wasm'"></script>
     <script src="/ffmpeg/ffmpeg-core.worker.js"></script>
   </head>
   <body>
     <div id="app">
-      <h1>Audio für booki konvertieren</h1>
+      <h1>Audio für Booki Sticker konvertieren</h1>
+      
       <div class="description">
-        <h3>Konvertiere eine beliebige Audiodatei, um sie mit booki-stiften abspielen zu können.        </h3>
-          <p><span class="warning">Dies ist ein Community-Projekt. Die Verwendung erfolgt auf eigene Gefahr!</span>
-          <ol>
-            <li>Nimm die Audiodatei mit einem Gerät deiner Wahl auf.</li>
-            <li>Ziehen Sie Ihre Audiodatei und legen Sie sie ab. (Die Dateien werden <u>nicht</u> ins Internet hochgeladen und bleiben auf deinem Computer)            </li>
-            <li>Nach der Konvertierung wird eine Schaltfläche mit einem Link angezeigt, über den du deine Datei herunterladen kannst.</li>
-            <li>Kopiere die Dateien per USB auf den booki pen in den Ordner diyRecord.</li>
-          </ol>
+        <h3>Konvertiere eine beliebige Audiodatei, um sie mit Booki-stiften abspielen zu können.        </h3>
+        <p><span class="warning orange">⚠️ Dies ist ein Community-Projekt. Die Verwendung erfolgt auf eigene Gefahr!</span>
+        <ol>
+          <li>Nimm die Audiodatei mit einem Gerät deiner Wahl auf.</li>
+          <li>Ziehen Sie Ihre Audiodatei und legen Sie sie ab. (Die Dateien werden <u>nicht</u> ins Internet hochgeladen und bleiben auf deinem Computer)            </li>
+          <li>Nach der Konvertierung wird eine Schaltfläche mit einem Link angezeigt, über den du deine Datei herunterladen kannst.</li>
+          <li>Kopiere die Dateien per USB auf den Booki pen in den Ordner <code>📂diyRecord</code>.</li>
+        </ol>
 
         </p>
       </div>
+      
       <hr>
+
       <div id="ffmpeg-area">
         <div>
           <p class="sticker-input">
@@ -38,7 +41,37 @@
           Zieh dann eine Mediendatei per Drag & Drop hierher...
         </div>
       </div>
+      
       <hr>
+      
+      <div class="description">
+        <details name="more" open>
+          <summary>Weitere Booki-Tricks:</summary>
+          <p><ul>
+            <li>💡 <span class="warning green">Nach eigenen Tests funktionieren die Sticker auch nachdem die laminiert wurden.</span> Dadurch lässt sich auch langlebiges Unterrichtsmaterial anfertigen.</li>
+            <li>💡 Die Stickernummer korrespondiert immer mit dem Dateinamen im <code>📂diyRecord</code> Ordner. <span class="warning green">Der Dateiname ist</span></li>
+
+          </ul>
+        </p>
+        </details>
+        <details name="more">
+          <summary>Wie kam es zu dieser Seite?</summary>
+          <p>Die booki Stifte sind ein flexibles Werkzeug für Lehrer:innen und sind für die Schüler:innen leicht zu benutzen.
+            Dabei entsteht der größte Nutzen, wenn Lehrer:innen eigene interaktive Inhalte mit den Do-it-Yourself-Stickern für den Unterricht anfertigen.</p>
+          <p>Das Anfertigen dieser DIY-Aufnahme ist jedoch mit hohem Aufwand verbunden. Für jeden einzelnen Sticker muss:</p>
+          <ol>
+            <li>Der Stift wird auf den Record-Sticker getippt.⁣ </li>
+            <li>Die Aufnahme wird eingesprochen.</li>
+            <li>Die Aufnahme wird mit einem Knopfdruck beendet.</li>
+            <li>Die Aufnahme wird mit einem Tipp auf den Wiedergabe-Sticker geprüft.</li>
+            <li>Ist die Aufnahme OK geht es weiter, bei einem Fehler kann die Aufnahme mit einem Tipp auf den Lösch-Sticker wieder gelöscht werden.</li>
+            <li>Damit die Schülerinnen nicht aus Versehen die Aufnahme überschreiben wird dann der Wiedergabe-Sticker von den anderen Stickern abgetrennt.</li>
+          </ol>
+
+        </details>
+
+        
+      </div>
       <img src="/booki.png" id="pen">
 
     </div>

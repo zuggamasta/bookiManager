@@ -1,18 +1,21 @@
 :root {
-  color-scheme: light;
-  color: var(--c-black);
-  background-color: var(--c-light);
 
   --c-black: #000;
   --c-white: #ffffff;
-  --c-light: #ffffff;
+  --c-light: #fefefe;
   --c-dark:  #2e2e2e;
-
+  --c-gray:  #aaaaaa;
+  --c-yellow-highlight: #fffae6;
+  
   --c-warn-light: orangered;
   --c-warn-dark:  orange;
 
   --c-green: #86BD42;
   --c-blue: #0199B1;
+
+  color-scheme: light;
+  color: var(--c-black);
+  background-color: var(--c-white);
 }
 
 h1{
@@ -37,25 +40,6 @@ body {
   min-height: 100vh;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-#pen{
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  max-width: 5em;
-  z-index: -999;
-}
-
-.card {
-  padding: 2em;
-}
-
 button {
   width: 51%;
   height: 5em;
@@ -69,9 +53,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: var(--c-light);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -94,8 +80,24 @@ input {
   background-color: var(--c-green);
 }
 
+code{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: #eee;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
 ol{
   text-align: left;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  text-indent: -1.3rem;
 }
 
 hr{
@@ -104,23 +106,60 @@ hr{
   border-color: #aaaaaa10;
 }
 
+details {
+  border-radius: 4px;
+  text-align: left;
+  border: 1px solid var(--c-gray);
+  padding: 0.5em 0.5em 0;
+  background-color: var(--c-white);
+  margin-bottom: 1em;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+summary:hover {
+  color: var(--c-green);
+  cursor:pointer;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
 .warning {
   font-weight: 900;
+  background-color: var(--c-yellow-highlight);
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.orange{
   color: var(--c-warn-light);
+}
+
+.green{
+  color: var(--c-green);
+}
+
+.card {
+  padding: 2em;
 }
 
 .sticker-input{
   display: flex;
-  background-color: #fff;
+  background-color: var(--c-white);
   height: 5em;
   border-radius: 4em;
   padding-left: 1em;
   padding-right: 1em;
-  border: solid 1px #aaa;
+  border: solid 1px var(--c-gray);
   margin: 0px;
   align-items: center;
   justify-content: center;
-
 }
 
 .zone {
@@ -128,7 +167,8 @@ hr{
   padding-left: 1em;
   padding-right: 1em;
   height: 5em ;
-  border: 1.5px dashed #aaa;
+  border: 1.5px dashed var(--c-gray);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,4 +182,19 @@ hr{
   justify-content: center;
   align-items: flex-start;
   gap: 1em;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#pen{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 5em;
+  z-index: -999;
 }
